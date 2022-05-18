@@ -12,7 +12,9 @@ import {
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  // ETH Balance of the DAO contract
   const [treasuryBalance, setTreasuryBalance] = useState("0");
+  // Number of proposals created in the DAO
   const [numProposals, setNumProposals] = useState("0");
   // Array of all proposals created in the DAO
   const [proposals, setProposals] = useState([]);
@@ -87,7 +89,7 @@ export default function Home() {
       setLoading(false);
     } catch (error) {
       console.error(error);
-      window.alert(error.data.message);
+      //window.alert(error.data.message);
     }
   };
 
